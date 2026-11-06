@@ -1,0 +1,7 @@
+Public Domain
+
+scandir() for win32
+written by Tom Torfs, 2002/10/31
+donated to the public domain; use this code for anything you like as long
+as it is understood there are absolutely *NO* warranties of any kind, even
+implied

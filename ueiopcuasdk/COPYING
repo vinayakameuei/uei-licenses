@@ -1,0 +1,100 @@
+UEIPAC/UeiOpcUa/opcua_sdk - Unified Automation OPC UA C++ SDK 1.3.5 (ueiopcuasdk)
+=================================================================================
+
+Copyright (c) 2006-2015 Unified Automation GmbH. All rights reserved.
+Copyright (c) 2005-2011 The OPC Foundation, Inc. All rights reserved.
+
+Each file is licensed as stated in its own header (SPDX-License-Identifier
+line or license notice). The full text of every license is in the LICENSES/
+directory. This file summarizes the licenses of the files built into
+libuastack.so and the static SDK libraries (see CMakeLists.txt) and the
+installed headers. If this summary and a file header disagree, the file
+header applies.
+
+This directory is THIRD-PARTY commercial software licensed by UEI from
+Unified Automation GmbH. It is not UEI code.
+
+
+License                           SPDX identifier / license text
+--------------------------------  -------------------------------------------
+1. Unified Automation SLA 2.5     LicenseRef-UnifiedAutomation-SLA-2.5
+                                  LICENSES/LicenseRef-UnifiedAutomation-SLA-2.5.txt
+2. OPC Foundation MIT License 1.00
+                                  LicenseRef-OPCFoundation-MIT-1.00
+                                  LICENSES/LicenseRef-OPCFoundation-MIT-1.00.txt
+
+
+1. LicenseRef-UnifiedAutomation-SLA-2.5
+   Copyright (c) 2006-2015 Unified Automation GmbH (lic/UnifiedAutomation_Software_License_Agreement.txt)
+-----------------------------------------
+   Built:
+   src/datalogger/*.c  (4 files)
+   src/datalogger/linux/*.c  (1 files)
+   src/uabase/uabasec/*.c  (8 files)
+   src/uabase/uabasec/platforms/linux/*.c  (3 files)
+   src/uabase/uabasec/tools/*.c  (5 files)
+   src/uaclient/uaclientc/*.c  (11 files)
+   src/uaserver/uaserverc/*.c  (29 files)
+   src/uaserver/uaserverc/modules/authentication/internal/*.c  (1 files)
+   src/uaserver/uaserverc/providers/models/di/*.c  (3 files)
+   src/uaserver/uaserverc/providers/models/plcopen/*.c  (2 files)
+   src/uaserver/uaserverc/providers/server/*.c  (8 files)
+   src/uastack/core/*.c  (12 files)
+   src/uastack/platforms/linux/*.c  (27 files)
+   src/uastack/proxystub/clientproxy/*.c  (3 files)
+   src/uastack/proxystub/serverstub/*.c  (4 files)
+   src/uastack/securechannel/*.c  (7 files)
+   src/uastack/stackcore/*.c  (17 files)
+   src/uastack/transport/tcp/*.c  (4 files)
+
+   Installed:
+   /usr/include/baselib/*.h  (16 files)
+   /usr/include/baselib/arch/gcc/*.h  (1 files)
+   /usr/include/clientlib/*.h  (14 files)
+   /usr/include/datalogger/*.h  (6 files)
+   /usr/include/models_di/*.h  (4 files)
+   /usr/include/models_plcopen/*.h  (3 files)
+   /usr/include/serverlib/*.h  (39 files)
+   /usr/include/uastack/*.h  (50 files)
+   /usr/lib/*{.a,.so}  (8 files)
+
+   [REVIEW NOTE - remove before commit] SLA 2.5 section 1.3(b) forbids
+   distributing "the corresponding, separate header files" and building
+   developer tools from the SDK. ueiopcuasdk-dev (headers) and ueiopcuasdk-
+   staticdev must never be installed in an image or shipped in a Yocto
+   SDK/eSDK. Today only the runtime package ueiopcuasdk (libuastack.so) is
+   in uei-image-sec-minimal.
+
+
+2. LicenseRef-OPCFoundation-MIT-1.00
+   Copyright (c) 2005-2011 The OPC Foundation, Inc.
+--------------------------------------
+   Installed headers:
+   /usr/include/uastack/opcua_config.h
+   /usr/include/uastack/opcua_p_config.h
+
+
+External components (not included in this directory)
+----------------------------------------------------
+libuastack.so dynamically links OpenSSL (openssl recipe, Apache-2.0).
+lic/OpenSSL_license.txt in the SDK refers to that external library.
+
+
+Files not built/installed for the ARM (SoloX) target
+----------------------------------------------------
+Windows builds, examples, documentation and tools in the SDK tree are not
+part of the package.
+
+
+[REVIEW NOTE - remove before commit] Confirm with Unified Automation which
+parts of the ANSI C stack (uastack) are under the OPC Foundation MIT
+license vs. the SLA.
+
+
+Per-file header format
+----------------------
+   // SPDX-License-Identifier: LicenseRef-UEI-Proprietary
+   // Copyright (C) 2026 United Electronic Industries, Inc.
+
+
+Yocto recipe: ueiopcuasdk   LICENSE = "Proprietary & MIT"

@@ -1,0 +1,10 @@
+Twin Oaks Computing, Inc. - CoreDX DDS 5.11 runtime
+
+Prebuilt libraries libdds.so, libdds_cf.so, libdds_xml.so,
+libdds_qos_provider.so (version 5.11.1). The binaries also state:
+"Contains multiple-precision arithmetic code originally written by
+David Ireland, copyright (c) 2001-8 by D.I. Management Services Pty
+Limited <www.di-mgt.com.au>, and is used with permission."
+
+[REVIEW NOTE - remove before commit] Placeholder. Insert the exact
+license terms here; do not commit until confirmed.

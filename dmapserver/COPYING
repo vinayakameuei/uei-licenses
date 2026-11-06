@@ -1,0 +1,59 @@
+UEIPAC/tools/dmapserver - DMAP server library (dmapserver / libDmapServer.a, test.libDmapServer)
+================================================================================================
+
+Copyright (C) United Electronic Industries, Inc. (UEI)
+All rights reserved.
+
+Each file is licensed as stated in its own header (SPDX-License-Identifier
+line or license notice). The full text of every license is in the LICENSES/
+directory. This file summarizes the licenses of the files built into
+libDmapServer.a / test.libDmapServer (see Makefile.arm) and the installed
+headers. If this summary and a file header disagree, the file header
+applies.
+
+
+License                           SPDX identifier / license text
+--------------------------------  -------------------------------------------
+1. UEI Proprietary                LicenseRef-UEI-Proprietary
+                                  LICENSES/LicenseRef-UEI-Proprietary.txt
+
+
+1. LicenseRef-UEI-Proprietary
+-------------------------------
+   Built into the binaries:
+   DataSource.cpp             DmapServer.cpp
+   PdnaDiagnostics.cpp        PdnaSource.cpp
+   SensorConversion.cpp       SimuSource.cpp
+   UeiCJCConverter.cpp        UeiCTConverter.cpp
+   UeiSGConverter.cpp         UeiVRConverter.cpp
+   testclient/testclient.cpp
+
+   Installed files:
+   /usr/include/DataSource.h        /usr/include/PdnaDiagnostics.h
+   /usr/include/PdnaSource.h        /usr/include/SensorConversion.h
+   /usr/include/SimuSource.h        /usr/include/UeiCJCConverter.h
+   /usr/include/UeiCTConverter.h    /usr/include/UeiSGConverter.h
+   /usr/include/UeiVRConverter.h    /usr/include/fifo.h
+   /usr/include/headers.h           /usr/lib/libDmapServer.a
+   /usr/sbin/test.libDmapServer
+
+   [REVIEW NOTE - remove before commit] Almost none of the UEI files have a
+   copyright or license header today. Add the SPDX header shown below to
+   each file.
+
+
+Files not built/installed for the ARM (SoloX) target
+----------------------------------------------------
+Windows/Visual Studio project files, tests and other build variants in the
+SVN module are not part of the Yocto package and are not covered by this
+summary.
+
+
+
+Per-file header format
+----------------------
+   // SPDX-License-Identifier: LicenseRef-UEI-Proprietary
+   // Copyright (C) 2026 United Electronic Industries, Inc.
+
+
+Yocto recipe: dmapserver   LICENSE = "Proprietary"

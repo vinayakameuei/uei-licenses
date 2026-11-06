@@ -1,0 +1,61 @@
+UEIModbus - UEI Modbus/TCP slave application (ueimodbus / modbusslave)
+======================================================================
+
+Copyright (C) United Electronic Industries, Inc. (UEI)
+All rights reserved.
+
+Each file is licensed as stated in its own header (SPDX-License-Identifier
+line or license notice). The full text of every license is in the
+LICENSES/ directory. This file summarizes the licenses of the files built
+into modbusslave (see Makefile.arm) and the other installed files
+(modbusslave.conf, UI/modbus.html). If this summary and a file header
+disagree, the file header applies.
+
+This application contains no third-party source code.
+
+
+License                           SPDX identifier / license text
+--------------------------------  -------------------------------------------
+1. UEI Proprietary                LicenseRef-UEI-Proprietary
+                                  LICENSES/LicenseRef-UEI-Proprietary.txt
+
+
+1. LicenseRef-UEI-Proprietary
+-----------------------------
+   Built into modbusslave:
+   ModbusSlave.cpp            ModbusDataMap.cpp      ModbusPDU.cpp
+   ModbusTCP.cpp              ModbusSimu.cpp         ModbusPdnaMap.cpp
+   UeiCJCConverter.cpp        UeiSGConverter.cpp     UeiVRConverter.cpp
+   UeiLVDTSimu.cpp            SensorConversion.cpp   PdnaDiagnostics.cpp
+   AIController.cpp           AOController.cpp       DIController.cpp
+   DOController.cpp           I2CController.cpp      LVDTController.cpp
+   SerialController.cpp       SyncResController.cpp  RTDSimuController.cpp
+   ARINC429Controller.cpp
+   and all *.h files in this directory
+
+   Installed data files:
+   modbusslave.conf           UI/modbus.html
+
+   [REVIEW NOTE - remove before commit] None of these files has a
+   copyright or license header today (only "Author: frederic"). Add the
+   SPDX header below to each source file.
+
+
+External components (not included in this directory)
+----------------------------------------------------
+UI/modbus.html loads jQuery and jQuery UI (js/jquery.js,
+js/jquery-ui.min.js, js/jquery-ui.min.css) at runtime. These files are
+shipped by the ueiroot-wwwfs package under their own license (MIT) and are
+not covered by this file.
+
+
+Files not built for the ARM (SoloX) target
+------------------------------------------
+tests/, doc/, distribution/, CMake and Visual Studio project files are not
+part of the Yocto package and are not covered by this summary.
+
+
+Per-file header format
+----------------------
+   // SPDX-License-Identifier: LicenseRef-UEI-Proprietary
+   // Copyright (C) 2024-2026 United Electronic Industries, Inc.

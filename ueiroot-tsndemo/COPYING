@@ -1,0 +1,62 @@
+PDNA_MX6SX/kirkstone/ueiroot-tsndemo - TSN demo scripts (ueiroot-tsndemo)
+=========================================================================
+
+Copyright (C) United Electronic Industries, Inc. (UEI)
+All rights reserved.
+Copyright (c) 2019, Intel Corporation (check_clocks.c)
+
+Each file is licensed as stated in its own header (SPDX-License-Identifier
+line or license notice). The full text of every license is in the LICENSES/
+directory. This file summarizes the licenses of the files installed under
+/usr/local/tsndemo. If this summary and a file header disagree, the file
+header applies.
+
+
+License                           SPDX identifier / license text
+--------------------------------  -------------------------------------------
+1. UEI Proprietary                LicenseRef-UEI-Proprietary
+                                  LICENSES/LicenseRef-UEI-Proprietary.txt
+2. BSD 3-Clause License           BSD-3-Clause
+                                  LICENSES/BSD-3-Clause.txt
+3. GNU GPL v2 only                GPL-2.0-only
+                                  LICENSES/GPL-2.0-only.txt
+
+
+1. LicenseRef-UEI-Proprietary
+-------------------------------
+   Installed:
+   /usr/local/tsndemo/README_UEI       /usr/local/tsndemo/configTSN.sh
+   /usr/local/tsndemo/gst-listener.sh  /usr/local/tsndemo/gst-talker.sh
+
+   [REVIEW NOTE - remove before commit] README_UEI says the demo originated
+   from the NXP community example "AVB-TSN demo on i.MX8MP"
+   (community.nxp.com). That post states no license; confirm the gst-*.sh /
+   configTSN.sh scripts are UEI-written or obtain terms.
+
+   [REVIEW NOTE - remove before commit] Almost none of the UEI files have a
+   copyright or license header today. Add the SPDX header shown below to
+   each file.
+
+
+2. BSD-3-Clause
+   Copyright (c) 2019, Intel Corporation (SPDX-License-Identifier: BSD-3-Clause)
+-----------------
+   Installed:
+   /usr/local/tsndemo/check_clocks.c
+
+
+3. GPL-2.0-only
+   linuxptp project (configs/gPTP.cfg)
+-----------------
+   Installed (copy of linuxptp configs/gPTP.cfg):
+   /usr/local/tsndemo/gPTP.cfg
+
+
+
+Per-file header format
+----------------------
+   # SPDX-License-Identifier: LicenseRef-UEI-Proprietary
+   # Copyright (C) 2026 United Electronic Industries, Inc.
+
+
+Yocto recipe: ueiroot-tsndemo   LICENSE = "Proprietary & BSD-3-Clause & GPL-2.0-only"

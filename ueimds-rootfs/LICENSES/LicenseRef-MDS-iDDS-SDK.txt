@@ -1,0 +1,8 @@
+MDS Aero Support Corporation - iDDS SDK runtime
+
+Copyright (C) MDS Aero Support Corporation. All Rights Reserved.
+Prebuilt libraries libidds.so, libEUC.so, libmdsheap.so, idds_shell.so
+and SDK headers. Runtime license key: mds-license.lic
+
+[REVIEW NOTE - remove before commit] Placeholder. Insert the exact
+license terms here; do not commit until confirmed.

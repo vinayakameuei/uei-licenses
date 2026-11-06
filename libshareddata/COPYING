@@ -1,0 +1,62 @@
+UEIPAC/tools/libshareddata - UEI shared data library (libshareddata1 / libshareddata.a)
+=======================================================================================
+
+Copyright (C) United Electronic Industries, Inc. (UEI)
+All rights reserved.
+
+Each file is licensed as stated in its own header (SPDX-License-Identifier
+line or license notice). The full text of every license is in the LICENSES/
+directory. This file summarizes the licenses of the files built into
+libshareddata.so / .a (see Makefile.arm) and the installed header. If this
+summary and a file header disagree, the file header applies.
+
+
+License                           SPDX identifier / license text
+--------------------------------  -------------------------------------------
+1. UEI Proprietary                LicenseRef-UEI-Proprietary
+                                  LICENSES/LicenseRef-UEI-Proprietary.txt
+2. Public domain (Pug XML)        LicenseRef-PublicDomain
+                                  LICENSES/LicenseRef-PublicDomain.txt
+
+
+1. LicenseRef-UEI-Proprietary
+-------------------------------
+   Built into the binaries:
+   BSDUnixSocketServer.cpp  SocketServerFactory.cpp
+   UeiSharedData.cpp        UeiSharedDataDesc.cpp
+   UeiUtils.cpp             WebSocketServer.cpp
+   tests/DataClient.cpp     tests/DataServer.cpp
+   tests/UeiSharedTest.cpp  tests/Utils.cpp
+
+   Installed files:
+   /usr/include/UeiSharedData.h     /usr/lib/libshareddata.a
+   /usr/lib/libshareddata.so        /usr/lib/libshareddata.so.1
+   /usr/lib/libshareddata.so.1.0.0
+
+   [REVIEW NOTE - remove before commit] Almost none of the UEI files have a
+   copyright or license header today. Add the SPDX header shown below to
+   each file.
+
+
+2. LicenseRef-PublicDomain
+   Copyright (C) 2003, by Kristen Wegner
+----------------------------
+   Pug XML Parser 1.0002 (header-only, compiled in):
+   pugxml.h
+
+
+Files not built/installed for the ARM (SoloX) target
+----------------------------------------------------
+Windows/Visual Studio project files, tests and other build variants in the
+SVN module are not part of the Yocto package and are not covered by this
+summary.
+
+
+
+Per-file header format
+----------------------
+   // SPDX-License-Identifier: LicenseRef-UEI-Proprietary
+   // Copyright (C) 2026 United Electronic Industries, Inc.
+
+
+Yocto recipe: libshareddata   LICENSE = "Proprietary & PD"

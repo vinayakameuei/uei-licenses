@@ -1,0 +1,87 @@
+Common/UeiPalLib - UEI platform abstraction library (ueipallib / libUeiPal.a, UeiPalTest)
+=========================================================================================
+
+Copyright (C) United Electronic Industries, Inc. (UEI)
+All rights reserved.
+
+Each file is licensed as stated in its own header (SPDX-License-Identifier
+line or license notice). The full text of every license is in the LICENSES/
+directory. This file summarizes the licenses of the files built into
+libUeiPal.a / UeiPalTest (see Makefile.arm) and the installed headers. If
+this summary and a file header disagree, the file header applies.
+
+
+License                           SPDX identifier / license text
+--------------------------------  -------------------------------------------
+1. UEI Proprietary                LicenseRef-UEI-Proprietary
+                                  LICENSES/LicenseRef-UEI-Proprietary.txt
+2. GNU LGPL v3 or later           LGPL-3.0-or-later
+                                  LICENSES/LGPL-3.0-or-later.txt
+3. Public domain (scandir)        LicenseRef-PublicDomain
+                                  LICENSES/LicenseRef-PublicDomain.txt
+4. GNU GPL v3 or later            GPL-3.0-or-later
+                                  LICENSES/GPL-3.0-or-later.txt
+
+
+1. LicenseRef-UEI-Proprietary
+-------------------------------
+   Built into libUeiPal.a:
+   AsyncDelegate.cpp          CircularBuffer.cpp
+   ClockWatch.cpp             HighResTimer.cpp
+   Pipe.cpp                   SignalGenerator.cpp
+   SynchObj.cpp               Thread.cpp
+   UeiDaqPAL.cpp              UeiPalTest/UeiPalTest.cpp
+
+   Installed files:
+   /usr/include/AsyncDelegate.h    /usr/include/CircularBuffer.h
+   /usr/include/ClockWatch.h       /usr/include/HighResTimer.h
+   /usr/include/Pipe.h             /usr/include/SignalGenerator.h
+   /usr/include/StdAfx.h           /usr/include/SynchObj.h
+   /usr/include/Thread.h           /usr/include/UeiDaqPAL.h
+   /usr/lib/libUeiPal.a            /usr/local/sbin/UeiPalTest
+
+   [REVIEW NOTE - remove before commit] Almost none of the UEI files have a
+   copyright or license header today. Add the SPDX header shown below to
+   each file.
+
+
+2. LGPL-3.0-or-later
+   sxmlc - Simple XML C parser (see sxmlc/COPYING.LESSER.txt)
+----------------------
+   Built into libUeiPal.a and UeiPalTest:
+   sxmlc/sxmlc.c       sxmlc/sxmlsearch.c  sxmlc/sxmlutils.c
+
+   Installed headers:
+   /usr/include/sxmlc.h       /usr/include/sxmlsearch.h
+   /usr/include/sxmlutils.h
+
+   [REVIEW NOTE - remove before commit] sxmlc is LGPL-3.0-or-later and is
+   linked STATICALLY into libUeiPal.a (shipped in ueipallib-staticdev,
+   which is in the image) and UeiPalTest. LGPL-3.0 section 4 requires that
+   recipients can relink with a modified sxmlc (provide object files or the
+   UEI sources) and receive the LGPL/GPL texts and sxmlc source. Consider
+   building sxmlc as a shared library or replacing it.
+
+
+3. LicenseRef-PublicDomain
+   written by Tom Torfs, 2002
+----------------------------
+   Installed header:
+   /usr/include/scandir.h
+
+
+Files not built/installed for the ARM (SoloX) target
+----------------------------------------------------
+Windows/Visual Studio project files, tests and other build variants in the
+SVN module are not part of the Yocto package and are not covered by this
+summary.
+
+
+
+Per-file header format
+----------------------
+   // SPDX-License-Identifier: LicenseRef-UEI-Proprietary
+   // Copyright (C) 2026 United Electronic Industries, Inc.
+
+
+Yocto recipe: ueipallib   LICENSE = "Proprietary & LGPL-3.0-or-later & PD"

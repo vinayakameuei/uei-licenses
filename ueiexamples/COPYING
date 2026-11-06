@@ -1,0 +1,242 @@
+UEIPAC/examples - UEIPAC C examples (ueiexamples / /usr/local/examples)
+=======================================================================
+
+Copyright (C) United Electronic Industries, Inc. (UEI)
+All rights reserved.
+
+Each file is licensed as stated in its own header (SPDX-License-Identifier
+line or license notice). The full text of every license is in the LICENSES/
+directory. This file summarizes the licenses of the files built into the
+example programs under /usr/local/examples (see each example's
+Makefile.arm) and UeiPacUtils.o. If this summary and a file header
+disagree, the file header applies.
+
+
+License                           SPDX identifier / license text
+--------------------------------  -------------------------------------------
+1. UEI Proprietary                LicenseRef-UEI-Proprietary
+                                  LICENSES/LicenseRef-UEI-Proprietary.txt
+2. BSD 3-Clause License           BSD-3-Clause
+                                  LICENSES/BSD-3-Clause.txt
+
+
+1. LicenseRef-UEI-Proprietary
+-------------------------------
+   Built into the binaries:
+   GetDeviceInfo/*.cpp  (1 files)
+   GetVariables/*.c  (1 files)
+   PrintCapabilities/*.cpp  (1 files)
+   Sample101/*.cpp  (10 files)
+   Sample102/*.cpp  (10 files)
+   Sample201/*.cpp  (1 files)
+   Sample204/*.cpp  (1 files)
+   Sample205/*.cpp  (1 files)
+   Sample207/*.cpp  (1 files)
+   Sample207_Thermocouple/*.cpp  (2 files)
+   Sample208/*.cpp  (1 files)
+   Sample208_ShuntCalibration/*.cpp  (1 files)
+   Sample211/*.cpp  (1 files)
+   Sample212/*.cpp  (1 files)
+   Sample212_Thermocouple/*.cpp  (2 files)
+   Sample217/*.cpp  (1 files)
+   Sample217_Thermocouple/*.cpp  (2 files)
+   Sample218/*.cpp  (1 files)
+   Sample222/*.cpp  (1 files)
+   Sample222_RTD/*.cpp  (1 files)
+   Sample224/*.cpp  (1 files)
+   Sample224_AutoNull/*.cpp  (1 files)
+   Sample224_BridgeCompletion/*.cpp  (1 files)
+   Sample225/*.cpp  (1 files)
+   Sample248/*.cpp  (1 files)
+   Sample254_LVDT/*.cpp  (1 files)
+   Sample254_Simulation/*.cpp  (1 files)
+   Sample255/*.cpp  (1 files)
+   Sample255_Simulation/*.cpp  (1 files)
+   Sample318/*.cpp  (1 files)
+   Sample364/*.cpp  (1 files)
+   Sample378_Thermocouple/*.cpp  (1 files)
+   Sample388_RTD/*.cpp  (1 files)
+   Sample3xx/*.cpp  (1 files)
+   Sample3xx_Waveform/*.cpp  (1 files)
+   Sample403/*.cpp  (1 files)
+   Sample40x/*.cpp  (1 files)
+   Sample414_418/*.cpp  (1 files)
+   Sample416/*.cpp  (1 files)
+   Sample43x/*.cpp  (1 files)
+   Sample448/*.cpp  (1 files)
+   Sample449/*.cpp  (1 files)
+   Sample449_COS/*.cpp  (1 files)
+   Sample462/*.cpp  (1 files)
+   Sample480/*.cpp  (3 files)
+   Sample501/*.cpp  (1 files)
+   Sample503/*.cpp  (1 files)
+   Sample504_Async/*.cpp  (1 files)
+   Sample504_HDLC/*.cpp  (1 files)
+   Sample534/*.cpp  (5 files)
+   Sample553_BusController/*.cpp  (1 files)
+   Sample553_BusMonitor/*.cpp  (1 files)
+   Sample553_RemoteTerminal/*.cpp  (1 files)
+   Sample566/*.cpp  (1 files)
+   Sample566_scheduler/*.cpp  (1 files)
+   Sample601/*.cpp  (1 files)
+   Sample601_N_Pulses/*.cpp  (1 files)
+   Sample601_OneShotPulse/*.cpp  (1 files)
+   Sample601_PWM/*.cpp  (1 files)
+   Sample601_PeriodMeasurement/*.cpp  (1 files)
+   Sample602_GPSS/*.cpp  (1 files)
+   Sample604/*.cpp  (1 files)
+   Sample608/*.cpp  (1 files)
+   Sample650/*.cpp  (1 files)
+   Sample650_GPS/*.cpp  (1 files)
+   Sample664/*.cpp  (1 files)
+   Sample91x/*.cpp  (1 files)
+   SampleADMAP201/*.cpp  (1 files)
+   SampleADMAP207/*.cpp  (1 files)
+   SampleADMAP222/*.cpp  (1 files)
+   SampleAVMap201/*.cpp  (1 files)
+   SampleAVMap205/*.cpp  (1 files)
+   SampleAVMap207/*.cpp  (1 files)
+   SampleAVMap217/*.cpp  (1 files)
+   SampleAVMap480/*.cpp  (1 files)
+   SampleAVMapMultiple2xxs/*.cpp  (1 files)
+   SampleAVMapMultiple2xxs_MT/*.cpp  (1 files)
+   SampleAsync101/*.cpp  (1 files)
+   SampleAsync102CAN/*.cpp  (1 files)
+   SampleAsync102DI_COS/*.cpp  (1 files)
+   SampleAsync401_404_405_COS/*.cpp  (1 files)
+   SampleAsync403_COS/*.cpp  (1 files)
+   SampleAsync449_COS/*.cpp  (1 files)
+   SampleAsync480/*.cpp  (1 files)
+   SampleAsync501/*.cpp  (1 files)
+   SampleAsync503/*.cpp  (1 files)
+   SampleAsync516/*.cpp  (1 files)
+   SampleAsync553BC/*.cpp  (1 files)
+   SampleAsync553BM/*.cpp  (1 files)
+   SampleAsync553RT/*.cpp  (1 files)
+   SampleAsync601/*.cpp  (1 files)
+   SampleDMAP/*.cpp  (1 files)
+   SampleDMAP101/*.cpp  (1 files)
+   SampleDMAP102/*.cpp  (1 files)
+   SampleDMAP207/*.cpp  (1 files)
+   SampleDMAP208/*.cpp  (1 files)
+   SampleDMAP211/*.cpp  (1 files)
+   SampleDMAP222/*.cpp  (1 files)
+   SampleDMAP224/*.cpp  (1 files)
+   SampleDMAP254/*.cpp  (1 files)
+   SampleDMAP255/*.cpp  (1 files)
+   SampleDMAP403/*.cpp  (1 files)
+   SampleDMAP462/*.cpp  (1 files)
+   SampleDMAP480/*.cpp  (1 files)
+   SampleDMAP601_PWM/*.cpp  (1 files)
+   SampleDMAP601_PeriodMeasurement/*.cpp  (1 files)
+   SampleDMAP608/*.cpp  (1 files)
+   SampleDMAP60x/*.cpp  (1 files)
+   SampleDMAP_MQTT/*.c  (1 files)
+   SampleDMAP_SharedData/*.c  (1 files)
+   SampleDMAP_Thermocouple/*.cpp  (2 files)
+   SampleDMAP_UI/*.cpp  (1 files)
+   SampleDMAP_ZMQ/*.c  (1 files)
+   SampleDiagnostics/*.cpp  (1 files)
+   SampleEEPROM/*.cpp  (1 files)
+   SampleFanControl/*.cpp  (1 files)
+   SampleGPS/*.cpp  (1 files)
+   SampleGetCaps/*.cpp  (1 files)
+   SampleLayerDIO/*.cpp  (1 files)
+   SampleLayerPing/*.cpp  (1 files)
+   SampleLibUSB/*.c  (1 files)
+   SampleLinuxSerialPort/*.c  (1 files)
+   SampleSharedData/*.c  (1 files)
+   SampleSync_Event/*.cpp  (1 files)
+   SampleSync_PTP/*.c  (1 files)
+   SampleTimer/*.cpp  (1 files)
+   SampleTimer_CPU/*.cpp  (1 files)
+   SampleTrigger/*.c  (1 files)
+   SampleUDP/*.c  (1 files)
+   SampleUDPBroadcast/*.c  (1 files)
+   SampleVMap101/*.cpp  (1 files)
+   SampleVMap102AI_AO/*.cpp  (1 files)
+   SampleVMap102CAN/*.cpp  (1 files)
+   SampleVMap102Serial/*.cpp  (1 files)
+   SampleVMap201/*.cpp  (1 files)
+   SampleVMap204_225_PTP_Sync/*.c  (1 files)
+   SampleVMap205/*.cpp  (1 files)
+   SampleVMap207/*.cpp  (1 files)
+   SampleVMap207_UDP/*.c  (1 files)
+   SampleVMap211/*.cpp  (1 files)
+   SampleVMap211_Logger/*.cpp  (1 files)
+   SampleVMap212/*.cpp  (1 files)
+   SampleVMap217/*.cpp  (1 files)
+   SampleVMap217_GPS_Timestamp/*.cpp  (1 files)
+   SampleVMap217_Offline_Conversion/*.cpp  (1 files)
+   SampleVMap217_PTP_Sync/*.c  (1 files)
+   SampleVMap222/*.cpp  (1 files)
+   SampleVMap224/*.cpp  (1 files)
+   SampleVMap225/*.cpp  (1 files)
+   SampleVMap2xx_503/*.cpp  (1 files)
+   SampleVMap3xx/*.cpp  (1 files)
+   SampleVMap403/*.cpp  (1 files)
+   SampleVMap40xi/*.cpp  (1 files)
+   SampleVMap480/*.cpp  (1 files)
+   SampleVMap501/*.cpp  (1 files)
+   SampleVMap503/*.cpp  (1 files)
+   SampleVMap553_BusController/*.cpp  (1 files)
+   SampleVMap553_RemoteTerminal/*.cpp  (1 files)
+   SampleVMap566/*.cpp  (1 files)
+   SampleVMap664/*.cpp  (1 files)
+   SampleVMap664Plus/*.cpp  (1 files)
+   SampleVMap664_Multiport_Multithread/*.cpp  (1 files)
+   SampleVMap664_Multiport_Singlethread/*.cpp  (1 files)
+   SampleVMapMultiple211s/*.cpp  (1 files)
+   SampleVMapMultiple2xxs/*.cpp  (1 files)
+   SampleVMapMultiple508s/*.cpp  (1 files)
+   SampleVMap_Sync/*.cpp  (1 files)
+   SampleVoltmeter/*.cpp  (1 files)
+   SampleWatchdog/*.cpp  (1 files)
+   SampleWebUI/*.cpp  (1 files)
+   UeiPacUtils/*.c  (1 files)
+
+   Installed files:
+   /usr/lib/UeiPacUtils/*.o  (1 files)
+   /usr/local/examples/*  (170 files)
+
+   [REVIEW NOTE - remove before commit] Almost none of the UEI files have a
+   copyright or license header today. Add the SPDX header shown below to
+   each file.
+
+
+2. BSD-3-Clause
+   Copyright (c) 2005, David M Howard (nmeap NMEA parser)
+-----------------
+   Built into SampleGPS:
+   SampleGPS/nmeap01.c
+
+   Headers:
+   SampleGPS/nmeap.h      SampleGPS/nmeap_def.h
+
+   [REVIEW NOTE - remove before commit] The nmeap headers say "licensed ...
+   under the BSD Open Source License, see the file COPYING" but COPYING is
+   missing from SampleGPS. Add upstream nmeap's COPYING (BSD) to confirm
+   BSD-3-Clause.
+
+
+External components (not included in this directory)
+----------------------------------------------------
+SampleLibUSB dynamically links libusb (separate recipe). Examples link UEI
+libraries from daqlib/ueipallib.
+
+
+Files not built/installed for the ARM (SoloX) target
+----------------------------------------------------
+Windows/Visual Studio project files, tests and other build variants in the
+SVN module are not part of the Yocto package and are not covered by this
+summary.
+
+
+
+Per-file header format
+----------------------
+   // SPDX-License-Identifier: LicenseRef-UEI-Proprietary
+   // Copyright (C) 2026 United Electronic Industries, Inc.
+
+
+Yocto recipe: ueiexamples   LICENSE = "Proprietary & BSD-3-Clause"

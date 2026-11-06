@@ -1,0 +1,99 @@
+UEIPAC/UEIiDDS/MDS - MDS iDDS / CoreDX DDS runtime (ueimds-rootfs)
+==================================================================
+
+Copyright (C) MDS Aero Support Corporation
+Copyright (C) Twin Oaks Computing, Inc.
+Copyright (C) Jim Tcl authors
+
+Each file is licensed as stated in its own header (SPDX-License-Identifier
+line or license notice). The full text of every license is in the LICENSES/
+directory. This file summarizes the licenses of the prebuilt files
+installed by ueimds-rootfs / ueimds-rootfs-dev. If this summary and a file
+header disagree, the file header applies.
+
+This package contains NO UEI code. It redistributes prebuilt third-party
+binaries delivered to UEI in MDS/ship/target/ueipac.
+
+
+License                           SPDX identifier / license text
+--------------------------------  -------------------------------------------
+1. MDS Aero Support iDDS SDK      LicenseRef-MDS-iDDS-SDK
+                                  LICENSES/LicenseRef-MDS-iDDS-SDK.txt
+2. Twin Oaks Computing CoreDX DDS LicenseRef-TwinOaks-CoreDX
+                                  LICENSES/LicenseRef-TwinOaks-CoreDX.txt
+3. BSD 2-Clause FreeBSD/Views License
+                                  BSD-2-Clause-Views
+                                  LICENSES/BSD-2-Clause-Views.txt
+
+
+1. LicenseRef-MDS-iDDS-SDK
+   MDS Aero Support Corporation
+----------------------------
+   Installed:
+   /usr/include/EUCL_lib.h
+   /usr/include/idds_sdk.h
+   /usr/include/idds_sdk_app_config.h
+   /usr/include/idds_sdk_attributes.h
+   /usr/include/idds_sdk_cmd_msg.h
+   /usr/include/idds_sdk_config_service.h
+   /usr/include/idds_sdk_events.h
+   /usr/include/idds_sdk_log.h
+   /usr/include/idds_sdk_net.h
+   /usr/include/idds_sdk_node.h
+   /usr/include/idds_sdk_parameters.h
+   /usr/include/idds_sdk_time.h
+   /usr/lib/idds_shell.so
+   /usr/lib/libEUC.so
+   /usr/lib/libidds.so
+   /usr/lib/libmdsheap.so
+   /usr/local/UEIiDDS/mds-license.lic
+   /usr/local/UEIiDDS/qos-setup
+   /usr/local/UEIiDDS/qos.xml
+
+   [REVIEW NOTE - remove before commit] Obtain the MDS iDDS SDK
+   redistribution terms and put them in LICENSES/LicenseRef-MDS-iDDS-
+   SDK.txt. mds-license.lic is a runtime license key, not license terms.
+   ueimds-rootfs-dev ships the SDK headers - confirm that is allowed.
+
+
+2. LicenseRef-TwinOaks-CoreDX
+   Twin Oaks Computing, Inc. (CoreDX DDS 5.11.1)
+-------------------------------
+   Installed:
+   /usr/lib/libdds.so
+   /usr/lib/libdds.so.5.11
+   /usr/lib/libdds.so.5.11.1
+   /usr/lib/libdds_cf.so
+   /usr/lib/libdds_cf.so.5.11
+   /usr/lib/libdds_cf.so.5.11.1
+   /usr/lib/libdds_qos_provider.so
+   /usr/lib/libdds_qos_provider.so.5.11
+   /usr/lib/libdds_qos_provider.so.5.11.1
+   /usr/lib/libdds_xml.so
+   /usr/lib/libdds_xml.so.5.11
+   /usr/lib/libdds_xml.so.5.11.1
+
+   [REVIEW NOTE - remove before commit] Obtain the CoreDX DDS runtime
+   redistribution terms (via MDS or Twin Oaks).
+
+
+3. BSD-2-Clause-Views
+   Jim Tcl (jimsh interpreter, prebuilt)
+-----------------------
+   Installed:
+   /usr/local/UEIiDDS/jimsh
+
+   [REVIEW NOTE - remove before commit] Jim Tcl is BSD-2-Clause-Views; its
+   bundled components (e.g. regex derived from Henry Spencer's code,
+   linenoise) may carry additional notices. Obtain the jimsh version and
+   include Jim's LICENSE file.
+
+
+
+Per-file header format
+----------------------
+   # SPDX-License-Identifier: LicenseRef-UEI-Proprietary
+   # Copyright (C) 2026 United Electronic Industries, Inc.
+
+
+Yocto recipe: ueimds-rootfs   LICENSE = "Proprietary & BSD-2-Clause-Views"

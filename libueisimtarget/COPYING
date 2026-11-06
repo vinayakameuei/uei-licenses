@@ -1,0 +1,53 @@
+libueisimtarget - UEISim target library (libueisimtarget)
+=========================================================
+
+Copyright (C) 2013-2026 United Electronic Industries, Inc. (UEI)
+All rights reserved.
+
+Each file is licensed as stated in its own header (SPDX-License-Identifier
+line or license notice). The full text of every license is in the
+LICENSES/ directory. This file summarizes the licenses of the files built
+into libueisimtarget.so / libueisimtarget.a (see Makefile.arm) and the
+installed header UeiSimTarget.h. If this summary and a file header
+disagree, the file header applies.
+
+This library contains no third-party source code.
+
+
+License                           SPDX identifier / license text
+--------------------------------  -------------------------------------------
+1. UEI Proprietary                LicenseRef-UEI-Proprietary
+                                  LICENSES/LicenseRef-UEI-Proprietary.txt
+
+
+1. LicenseRef-UEI-Proprietary
+-----------------------------
+   Built into the library:
+   telnetlib.cpp              UeiSimTarget.cpp       UeiSimTargetDesc.cpp
+
+   Headers:
+   UeiSimTarget.h (installed) OsHeaders.h            telnetlib.h
+   UeiSimTargetDesc.h
+
+   [REVIEW NOTE - remove before commit] None of these files has a
+   copyright or license header today (only "Author: frederic"). Add the
+   SPDX header below to each file.
+
+   [REVIEW NOTE - remove before commit] "All rights reserved" grants no
+   rights to recipients. libueisimtarget-dev / -staticdev ship the header
+   and static library for customers to link against; replace
+   LICENSES/LicenseRef-UEI-Proprietary.txt with the UEI EULA /
+   distribution terms if that is intended.
+
+
+Files not built for the ARM (SoloX) target
+------------------------------------------
+DllMain.cpp, UeiSimTargetTest.cpp, DotNet/, Examples/, LabVIEW/, Matlab/
+and Web/ are not part of the Yocto package and are not covered by this
+summary.
+
+
+Per-file header format
+----------------------
+   // SPDX-License-Identifier: LicenseRef-UEI-Proprietary
+   // Copyright (C) 2013-2026 United Electronic Industries, Inc.

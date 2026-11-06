@@ -1,0 +1,60 @@
+UEIPAC/tools/webconfig - web configuration CGI (ueiwebconfig / webconfig.cgi, config.html)
+==========================================================================================
+
+Copyright (C) United Electronic Industries, Inc. (UEI)
+All rights reserved.
+
+Each file is licensed as stated in its own header (SPDX-License-Identifier
+line or license notice). The full text of every license is in the LICENSES/
+directory. This file summarizes the licenses of the files built into
+/www/cgi-bin/webconfig.cgi (see Makefile.arm) and /www/config.html. If this
+summary and a file header disagree, the file header applies.
+
+
+License                           SPDX identifier / license text
+--------------------------------  -------------------------------------------
+1. UEI Proprietary                LicenseRef-UEI-Proprietary
+                                  LICENSES/LicenseRef-UEI-Proprietary.txt
+2. Public domain (Pug XML)        LicenseRef-PublicDomain
+                                  LICENSES/LicenseRef-PublicDomain.txt
+
+
+1. LicenseRef-UEI-Proprietary
+-------------------------------
+   Built into the binaries:
+   ConvertXmlToConf.cpp  WebConfig.cpp
+
+   Installed files:
+   /www/cgi-bin/webconfig.cgi  /www/config.html
+
+   [REVIEW NOTE - remove before commit] Almost none of the UEI files have a
+   copyright or license header today. Add the SPDX header shown below to
+   each file.
+
+
+2. LicenseRef-PublicDomain
+   Copyright (C) 2003, by Kristen Wegner
+----------------------------
+   Pug XML Parser 1.0002 (header-only, compiled in):
+   pugxml.h
+
+
+Files not built/installed for the ARM (SoloX) target
+----------------------------------------------------
+Windows/Visual Studio project files, tests and other build variants in the
+SVN module are not part of the Yocto package and are not covered by this
+summary.
+
+
+[REVIEW NOTE - remove before commit] config.html references tabber.js,
+which is not shipped by any package. Remove the reference or add the file
+with its license (Tabber by Patrick Fitzgerald is MIT).
+
+
+Per-file header format
+----------------------
+   // SPDX-License-Identifier: LicenseRef-UEI-Proprietary
+   // Copyright (C) 2026 United Electronic Industries, Inc.
+
+
+Yocto recipe: ueiwebconfig   LICENSE = "Proprietary & PD"

@@ -1,0 +1,103 @@
+DAQ_IOMC - PowerDNA / UEIPAC kernel modules (pdnadev.ko, pdnabus.ko)
+=====================================================================
+
+Copyright (C) United Electronic Industries, Inc. (UEI), except where
+noted below.
+
+This directory contains works distributed under different licenses.
+Each file is licensed as stated in its own header (SPDX-License-Identifier
+line or license notice). The full text of every license is in the
+LICENSES/ directory. This file summarizes the licenses of the files built
+into the ARM (SoloX) kernel modules, see Makefile.arm. If this summary
+and a file header disagree, the file header applies.
+
+[REVIEW NOTE - remove before commit] pdnadev.ko declares
+MODULE_LICENSE("GPL") but also links the non-GPL files in sections 3-5.
+Decide how to resolve that (e.g. relicense the UEI-owned files in
+sections 3-4 as GPL-2.0-or-later and confirm the Altera terms), then
+update this file, the file headers and the Yocto recipe LICENSE together.
+
+
+License                           SPDX identifier / license text
+--------------------------------  -------------------------------------------
+1. GNU GPL v2 or later            GPL-2.0-or-later
+                                  LICENSES/GPL-2.0-or-later.txt
+2. GNU GPL v3 or later with the   GPL-3.0-or-later WITH GCC-exception-3.1
+   GCC Runtime Library Exception  LICENSES/GPL-3.0-or-later.txt
+                                  LICENSES/GCC-exception-3.1.txt
+3. UEI PowerDNA License           LicenseRef-UEI-PowerDNA
+                                  LICENSES/LicenseRef-UEI-PowerDNA.txt
+4. UEI Proprietary                LicenseRef-UEI-Proprietary
+                                  LICENSES/LicenseRef-UEI-Proprietary.txt
+5. Altera Jam STAPL               LicenseRef-Altera-JamSTAPL
+                                  LICENSES/LicenseRef-Altera-JamSTAPL.txt
+
+
+1. GPL-2.0-or-later
+-------------------
+   common/UEIPAC/pdnabus.c             -> pdnabus.ko (only source file)
+   common/UEIPAC/pdnalayer.c           -> pdnadev.ko
+
+2. GPL-3.0-or-later WITH GCC-exception-3.1
+   Copyright (C) 2003-2017 Free Software Foundation, Inc.
+------------------------------------------
+   arch/arm/imx6sx/fp/*.S              -> pdnadev.ko
+   (software floating point routines taken from libgcc)
+
+3. LicenseRef-UEI-PowerDNA
+--------------------------
+   common/Calibration.c       common/cli2.c          common/cli_ctu.c
+   common/cli_pwm.c           common/containers.c    common/dmap.c
+   common/mod_io.c            common/mod_io_func.c
+   common/UEIPAC/fifo_ueipac.c
+   drivers/*.c
+
+4. LicenseRef-UEI-Proprietary
+-----------------------------
+   Files with a UEI "All rights reserved" notice:
+   common/license.c           common/tokens.c        common/fw_time.c
+   common/hrt_timer.c
+
+   [REVIEW NOTE - remove before commit] The UEI files below have no
+   license header. Decide which license applies (1, 3 or 4), add the
+   SPDX header and move them to that section.
+   common/fw_crc.c            common/fw_jprog.c      common/fw_lprog.c
+   common/msgqueue.c          common/jam_bytecode/jam_uei.c
+   common/jam_bytecode/JBISTUB.c
+   common/UEIPAC/embd_async.c common/UEIPAC/fw_osal.c
+   common/UEIPAC/hw_test.c    common/UEIPAC/pdna_commands.c
+   common/UEIPAC/pdna_devices.c                     common/UEIPAC/stubs.c
+   common/UEIPAC/pdnadev_ioctl.h                    common/UEIPAC/embd_cmds.h
+   arch/arm/imx6sx/ueipac/drv_cpu_imx6sx.c
+   arch/arm/imx6sx/ueipac/iom_ueipac_imx6sx.c
+
+5. LicenseRef-Altera-JamSTAPL
+   Copyright (C) Altera Corporation 1998-2001
+-----------------------------
+   common/jam_bytecode/JBICOMP.c
+   common/jam_bytecode/JBIJTAG.c
+   common/jam_bytecode/JBIMAIN.c
+
+
+Files not built for the ARM (SoloX) target
+------------------------------------------
+Files under arch/powerpc/, build/ and other non-ARM build trees are not
+covered by this summary. They carry their own license headers (including
+GPL-2.0 Linux USB serial drivers and Micrium uC/OS sources).
+
+
+Per-file header format
+----------------------
+Every source file should start with an SPDX identifier and a copyright
+line, for example:
+
+   // SPDX-License-Identifier: GPL-2.0-or-later
+   /* Copyright (C) 2006-2026 United Electronic Industries, Inc. */
+
+   // SPDX-License-Identifier: LicenseRef-UEI-PowerDNA
+   /* Copyright (C) 2020-2026 United Electronic Industries, Inc. */
+
+   /* SPDX-License-Identifier: GPL-3.0-or-later WITH GCC-exception-3.1 */
+
+The SPDX line replaces the full license text currently pasted into each
+file header.

@@ -1,0 +1,76 @@
+UEIiDDS - UEI iDDS instrument node (uei-idds-instr / idds-n)
+============================================================
+
+Copyright (C) 2017-2018 MDS Aero Support Corporation
+Copyright (C) 2018-2025 United Electronic Industries, Inc. (UEI)
+All Rights Reserved.
+
+Each file is licensed as stated in its own header (SPDX-License-Identifier
+line or license notice). The full text of every license is in the
+LICENSES/ directory. This file summarizes the licenses of the files built
+into the idds-n executable (uei-idds-instr/*.cpp, see
+uei-idds-instr/Makefile.arm) and the installed wrapper scripts (ueiiDDS,
+idds_shell). If this summary and a file header disagree, the file header
+applies.
+
+
+License                           SPDX identifier / license text
+--------------------------------  -------------------------------------------
+1. UEI Proprietary                LicenseRef-UEI-Proprietary
+                                  LICENSES/LicenseRef-UEI-Proprietary.txt
+2. MDS iDDS example code          LicenseRef-MDS-iDDS-Example
+                                  LICENSES/LicenseRef-MDS-iDDS-Example.txt
+3. Public domain                  LicenseRef-PublicDomain
+                                  LICENSES/LicenseRef-PublicDomain.txt
+
+
+1. LicenseRef-UEI-Proprietary
+-----------------------------
+   uei-idds-instr/*.cpp, uei-idds-instr/*.h, except the files listed in
+   sections 2 and 3.
+   ueiiDDS, idds_shell
+
+   [REVIEW NOTE - remove before commit] These UEI files have no license
+   header. Confirm they fall under this section and add the SPDX header.
+
+2. LicenseRef-MDS-iDDS-Example
+   Copyright (C) 2017-2018 MDS Aero Support Corporation
+   Copyright (C) 2018-2025 United Electronic Industries, Inc.
+------------------------------
+   Files derived from the MDS iDDS SDK samples:
+   uei-idds-instr/uei_idds_instr.cpp
+   uei-idds-instr/uei_idds_ctrlcb.cpp
+   uei-idds-instr/uei_idds_attributes.cpp
+
+3. LicenseRef-PublicDomain
+   Copyright (C) 2003, by Kristen Wegner
+--------------------------
+   uei-idds-instr/pugxml.h  (Pug XML Parser 1.0002)
+
+
+Third-party components NOT included in this directory
+-----------------------------------------------------
+idds-n is dynamically linked against the following prebuilt libraries.
+They are delivered separately (MDS/ship/target/) under their own
+commercial licenses and are not covered by this file:
+
+   libidds, libEUC, libmdsheap ... MDS Aero Support Corporation iDDS SDK
+                                   (runtime license: mds-license.lic)
+   libdds, libdds_cf, libdds_xml,
+   libdds_qos_provider ........... CoreDX DDS, Twin Oaks Computing, Inc.
+
+[REVIEW NOTE - remove before commit] Confirm UEI's redistribution rights
+for the MDS and CoreDX runtime libraries, and which recipe ships them
+(likely ueimds-rootfs), so that recipe can declare their licenses.
+
+Files under MDS/, regression/ and tools/ are not built into idds-n and
+are not covered by this summary.
+
+
+Per-file header format
+----------------------
+Every source file should start with an SPDX identifier and a copyright
+line, for example:
+
+   // SPDX-License-Identifier: LicenseRef-UEI-Proprietary
+   // Copyright (C) 2018-2026 United Electronic Industries, Inc.

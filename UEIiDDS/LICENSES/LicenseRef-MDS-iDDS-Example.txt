@@ -1,0 +1,11 @@
+MDS iDDS Example Code License
+
+Copyright (C) 2017-2018 MDS Aero Support Corporation
+All Rights Reserved
+
+Example code. Can be copied and modified at will.
+
+[REVIEW NOTE - remove before commit] Text taken unchanged from the
+headers of the MDS iDDS SDK sample files. Confirm with MDS Aero Support
+Corporation (or UEI's MDS agreement) that this permits redistribution of
+the derived binary, and replace with the agreed terms if they differ.

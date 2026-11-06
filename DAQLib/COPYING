@@ -1,0 +1,48 @@
+DAQLib - PowerDNA DAQ library (libpowerdna)
+===========================================
+
+Copyright (C) 1997-2026 United Electronic Industries, Inc. (UEI)
+All rights reserved.
+
+Each file is licensed as stated in its own header (SPDX-License-Identifier
+line or license notice). The full text of every license is in the
+LICENSES/ directory. This file summarizes the licenses of the files built
+into libpowerdna.so / libpowerdna.a (all *.c files, see Makefile.arm) and
+the installed headers (*.h). If this summary and a file header disagree,
+the file header applies.
+
+This library contains no third-party source code.
+
+
+License                           SPDX identifier / license text
+--------------------------------  -------------------------------------------
+1. UEI Proprietary                LicenseRef-UEI-Proprietary
+                                  LICENSES/LicenseRef-UEI-Proprietary.txt
+2. UEI PowerDNA License           LicenseRef-UEI-PowerDNA
+                                  LICENSES/LicenseRef-UEI-PowerDNA.txt
+
+
+1. LicenseRef-UEI-Proprietary
+-----------------------------
+   All *.c and *.h files in this directory, except crc32.c.
+
+   [REVIEW NOTE - remove before commit] 11 header files have no license
+   header. Confirm they fall under this section and add the SPDX header.
+
+   [REVIEW NOTE - remove before commit] "All rights reserved" grants no
+   rights to recipients. If customers link against / redistribute
+   libpowerdna, replace LICENSES/LicenseRef-UEI-Proprietary.txt with the
+   UEI EULA / distribution terms, or move these files to section 2.
+
+2. LicenseRef-UEI-PowerDNA
+--------------------------
+   crc32.c
+
+
+Per-file header format
+----------------------
+Every source file should start with an SPDX identifier and a copyright
+line, for example:
+
+   // SPDX-License-Identifier: LicenseRef-UEI-Proprietary
+   // Copyright (C) 1997-2026 United Electronic Industries, Inc.

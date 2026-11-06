@@ -1,0 +1,12 @@
+UEI Proprietary License
+
+Copyright (C) United Electronic Industries, Inc. (UEI).
+All rights reserved.
+
+No license, express or implied, is granted to use, copy, modify or
+distribute this software except under a separate written agreement
+with United Electronic Industries, Inc.
+
+[REVIEW NOTE - remove before commit] Placeholder. Replace with UEI's
+official EULA / distribution terms if these files are meant to be
+redistributed to customers, or relicense the files instead.

@@ -1,0 +1,74 @@
+UEIPAC/UeiOpcUa/UeiOpcServer - UEI OPC UA server (ueiopcserver / UeiOpcServer, ueiopc_ui.cgi)
+=============================================================================================
+
+Copyright (C) United Electronic Industries, Inc. (UEI)
+All rights reserved.
+
+Each file is licensed as stated in its own header (SPDX-License-Identifier
+line or license notice). The full text of every license is in the LICENSES/
+directory. This file summarizes the licenses of the files built into
+UeiOpcServer and ueiopc_ui.cgi (see CMakeLists.txt) and the other installed
+files. If this summary and a file header disagree, the file header applies.
+
+
+License                           SPDX identifier / license text
+--------------------------------  -------------------------------------------
+1. UEI Proprietary                LicenseRef-UEI-Proprietary
+                                  LICENSES/LicenseRef-UEI-Proprietary.txt
+2. Unified Automation SLA 2.5     LicenseRef-UnifiedAutomation-SLA-2.5
+                                  LICENSES/LicenseRef-UnifiedAutomation-SLA-2.5.txt
+
+
+1. LicenseRef-UEI-Proprietary
+-------------------------------
+   Built into the binaries:
+   UeiDmapEngine.cpp                UeiDmapProvider.cpp
+   UeiDmapProviderBrowse.cpp        UeiDmapProviderCall.cpp
+   UeiDmapProviderEvents.cpp        UeiDmapProviderHistoryRead.cpp
+   UeiDmapProviderReadWrite.cpp     UeiDmapProviderSubscription.cpp
+   UeiOpcServer.cpp
+
+   Installed files:
+   /etc/opcua/settings.conf            /etc/systemd/system/ueiopc.service
+   /etc/ueiopc.xml                     /usr/bin/UeiOpcServer
+   /www/cgi-bin/ueiopc_ui.cgi          /www/ueiopc.html
+
+   [REVIEW NOTE - remove before commit] Almost none of the UEI files have a
+   copyright or license header today. Add the SPDX header shown below to
+   each file.
+
+
+2. LicenseRef-UnifiedAutomation-SLA-2.5
+   Copyright (c) Unified Automation GmbH. All rights reserved.
+-----------------------------------------
+   Statically linked into /usr/bin/UeiOpcServer:
+   libserverlib.a, libbaselib.a, libserverprovider.a, libmodels_*.a,
+   libdatalogger.a from ueiopcuasdk (Unified Automation C++ SDK 1.3.5)
+
+   [REVIEW NOTE - remove before commit] Redistribution of the SDK inside
+   UeiOpcServer is allowed only under UEI's purchased Unified Automation
+   runtime / binary developer licenses (SLA 2.5 sections 1.2/1.3). Confirm
+   the license count/type covers every shipped unit.
+
+
+External components (not included in this directory)
+----------------------------------------------------
+UeiOpcServer dynamically links libuastack.so (ueiopcuasdk) and OpenSSL
+(openssl recipe). ueiopc.html loads jQuery / jQuery UI shipped by ueiroot-
+wwwfs (MIT).
+
+
+Files not built/installed for the ARM (SoloX) target
+----------------------------------------------------
+Other directories of the UeiOpcUa SVN module (opcua_sdk is packaged by
+ueiopcuasdk) are not covered by this summary.
+
+
+
+Per-file header format
+----------------------
+   // SPDX-License-Identifier: LicenseRef-UEI-Proprietary
+   // Copyright (C) 2026 United Electronic Industries, Inc.
+
+
+Yocto recipe: ueiopcserver   LICENSE = "Proprietary"

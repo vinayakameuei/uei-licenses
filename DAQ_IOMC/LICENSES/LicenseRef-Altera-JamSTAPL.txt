@@ -1,0 +1,14 @@
+Altera Jam STAPL ByteCode Player
+
+Copyright (C) Altera Corporation 1998-2001
+
+Applies to:
+   common/jam_bytecode/JBICOMP.c
+   common/jam_bytecode/JBIJTAG.c
+   common/jam_bytecode/JBIMAIN.c
+
+[REVIEW NOTE - remove before commit] Placeholder. The source headers
+contain only the Altera copyright notice and no license grant. Insert
+here the exact license terms under which UEI received the Jam STAPL
+ByteCode Player source (e.g. the license file of the Altera/Intel Jam
+STAPL distribution, or UEI's agreement with Altera/Intel).

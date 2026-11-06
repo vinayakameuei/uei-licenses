@@ -1,0 +1,87 @@
+UEIPAC/file_system - UEIPAC web root (ueiroot-wwwfs / /www)
+===========================================================
+
+Copyright (C) United Electronic Industries, Inc. (UEI)
+All rights reserved.
+
+Each file is licensed as stated in its own header (SPDX-License-Identifier
+line or license notice). The full text of every license is in the LICENSES/
+directory. This file summarizes the licenses of the files installed under
+/www. If this summary and a file header disagree, the file header applies.
+
+
+License                           SPDX identifier / license text
+--------------------------------  -------------------------------------------
+1. UEI Proprietary                LicenseRef-UEI-Proprietary
+                                  LICENSES/LicenseRef-UEI-Proprietary.txt
+2. MIT License                    MIT
+                                  LICENSES/MIT.txt
+
+
+1. LicenseRef-UEI-Proprietary
+-------------------------------
+   UEI web pages and scripts:
+   /www/css/svglab.css             /www/images/bg-table-thead.png
+   /www/images/collapse-light.png  /www/images/collapse.png
+   /www/images/expand-light.png    /www/images/expand.png
+   /www/images/file.png            /www/images/folder.png
+   /www/images/logo-UEI.png        /www/index.html
+   /www/js/svglab_BarGauge.js      /www/js/svglab_Chart.js
+   /www/shareddata.html            /www/ueisim.html
+
+   [REVIEW NOTE - remove before commit] Almost none of the UEI files have a
+   copyright or license header today. Add the SPDX header shown below to
+   each file.
+
+
+2. MIT
+   Third-party web libraries (copyright notices below)
+--------
+   Installed:
+   /www/css/*.css  (3 files)
+   /www/css/base/*.css  (1 files)
+   /www/css/base/images/*{.png,.svg}  (69 files)
+   /www/css/ui-lightness/*.css  (2 files)
+   /www/css/ui-lightness/images/*{.gif,.png}  (15 files)
+   /www/js/*{.css,.js}  (5 files)
+
+   jquery.js: jQuery JavaScript Library v3.7.1, Copyright OpenJS Foundation
+   and other contributors (MIT).
+
+   jquery-ui.min.js / jquery-ui.min.css: jQuery UI v1.14.2, Copyright
+   OpenJS Foundation and other contributors (MIT).
+
+   css/ui-lightness/jquery-ui-1.10.3.custom.css: jQuery UI v1.10.3 (MIT).
+
+   css/ui-lightness/jquery-ui-1.8.16.custom.css: jQuery UI CSS Framework
+   1.8.16, Copyright 2011, AUTHORS.txt (http://jqueryui.com/about); dual
+   licensed MIT or GPL Version 2 - MIT elected.
+
+   dygraph-combined.js: dygraphs, Copyright 2011 Dan Vanderkam (MIT).
+
+   jquery.treetable.js / css: jQuery treeTable Plugin 3.0.2, Copyright
+   2013, Ludo van den Boom; dual licensed MIT or GPL Version 2 - MIT
+   elected.
+
+   css/jmwidgets-0.8.0*.css, css/base/*: jmWidgets 0.8.0, Copyright (c)
+   2012, Exor International, Inc. & BitMethods, Inc.; dual licensed MIT or
+   GPL Version 2 - MIT elected.
+
+   [REVIEW NOTE - remove before commit] Confirm the image files under
+   css/ui-lightness/images and css/base/images belong to jQuery UI /
+   jmWidgets.
+
+
+Files not built/installed for the ARM (SoloX) target
+----------------------------------------------------
+Only /www is installed from the file_system SVN module.
+
+
+
+Per-file header format
+----------------------
+   // SPDX-License-Identifier: LicenseRef-UEI-Proprietary
+   // Copyright (C) 2026 United Electronic Industries, Inc.
+
+
+Yocto recipe: ueiroot-wwwfs   LICENSE = "Proprietary & MIT"

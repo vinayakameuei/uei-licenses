@@ -1,0 +1,54 @@
+PDNA_MX6SX/kirkstone/ueiroot-tsnconfig - TSN configuration scripts (ueiroot-tsnconfig)
+======================================================================================
+
+Copyright (C) United Electronic Industries, Inc. (UEI)
+All rights reserved.
+
+Each file is licensed as stated in its own header (SPDX-License-Identifier
+line or license notice). The full text of every license is in the LICENSES/
+directory. This file summarizes the licenses of the files installed under
+/usr/local/tsnconfig. If this summary and a file header disagree, the file
+header applies.
+
+
+License                           SPDX identifier / license text
+--------------------------------  -------------------------------------------
+1. UEI Proprietary                LicenseRef-UEI-Proprietary
+                                  LICENSES/LicenseRef-UEI-Proprietary.txt
+2. GNU GPL v2 only                GPL-2.0-only
+                                  LICENSES/GPL-2.0-only.txt
+
+
+1. LicenseRef-UEI-Proprietary
+-------------------------------
+   Installed:
+   /usr/local/tsnconfig/ConfigTSN
+   /usr/local/tsnconfig/README
+   /usr/local/tsnconfig/config_bridge.sh
+   /usr/local/tsnconfig/config_vlan.sh
+
+   [REVIEW NOTE - remove before commit] Almost none of the UEI files have a
+   copyright or license header today. Add the SPDX header shown below to
+   each file.
+
+
+2. GPL-2.0-only
+   linuxptp project (configs/gPTP.cfg)
+-----------------
+   Installed (modified copy of linuxptp configs/gPTP.cfg):
+   /usr/local/tsnconfig/gPTP.cfg
+
+   [REVIEW NOTE - remove before commit] gPTP.cfg is a modified copy of
+   linuxptp's example configuration (linuxptp recipe LICENSE =
+   GPL-2.0-only). A short config file may not be copyrightable; decide
+   whether to keep the attribution or rewrite it.
+
+
+
+Per-file header format
+----------------------
+   # SPDX-License-Identifier: LicenseRef-UEI-Proprietary
+   # Copyright (C) 2026 United Electronic Industries, Inc.
+
+
+Yocto recipe: ueiroot-tsnconfig   LICENSE = "Proprietary & GPL-2.0-only"

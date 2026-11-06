@@ -1,0 +1,65 @@
+Yocto/Utilities/paramenv - parameter environment tool (paramenv)
+================================================================
+
+Copyright (C) 2019 United Electronic Industries, Inc. (UEI)
+
+Each file is licensed as stated in its own header (SPDX-License-Identifier
+line or license notice). The full text of every license is in the LICENSES/
+directory. This file summarizes the licenses of the files built into
+/usr/sbin/paramenv (see Makefile) and the other installed files. If this
+summary and a file header disagree, the file header applies.
+
+
+License                           SPDX identifier / license text
+--------------------------------  -------------------------------------------
+1. GNU GPL v2 or later            GPL-2.0-or-later
+                                  LICENSES/GPL-2.0-or-later.txt
+2. UEI PowerDNA License           LicenseRef-UEI-PowerDNA
+                                  LICENSES/LicenseRef-UEI-PowerDNA.txt
+3. UEI Proprietary                LicenseRef-UEI-Proprietary
+                                  LICENSES/LicenseRef-UEI-Proprietary.txt
+
+
+1. GPL-2.0-or-later
+   Copyright (C) 2019 United Electronic Industries, Inc. (SPDX: GPL-2.0+)
+---------------------
+   Built into paramenv:
+   paramenv.c       paramenv_main.c
+
+
+2. LicenseRef-UEI-PowerDNA
+----------------------------
+   Built into paramenv:
+   crc32.c
+
+   [REVIEW NOTE - remove before commit] crc32.c carries the UEI PowerDNA
+   license ("used on PowerDNA hardware"), which adds restrictions not
+   allowed by the GPL, yet it is linked into the GPL-2.0-or-later paramenv
+   binary. Relicense crc32.c as GPL-2.0-or-later (UEI owns it) or replace
+   it.
+
+
+3. LicenseRef-UEI-Proprietary
+-------------------------------
+   Installed scripts/config:
+   /usr/sbin/param.cfg  /usr/sbin/paramenvl
+
+   [REVIEW NOTE - remove before commit] These files have no header;
+   GPL-2.0-or-later may be the better choice to match paramenv.c.
+
+
+Files not built/installed for the ARM (SoloX) target
+----------------------------------------------------
+Windows/Visual Studio project files, tests and other build variants in the
+SVN module are not part of the Yocto package and are not covered by this
+summary.
+
+
+
+Per-file header format
+----------------------
+   // SPDX-License-Identifier: LicenseRef-UEI-Proprietary
+   // Copyright (C) 2026 United Electronic Industries, Inc.
+
+
+Yocto recipe: paramenv   LICENSE = "GPL-2.0-or-later & Proprietary"

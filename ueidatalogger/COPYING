@@ -1,0 +1,59 @@
+UEIPAC/tools/datalogger - UEIPAC data logger (ueidatalogger / logger.cgi, logger.html)
+======================================================================================
+
+Copyright (C) United Electronic Industries, Inc. (UEI)
+All rights reserved.
+
+Each file is licensed as stated in its own header (SPDX-License-Identifier
+line or license notice). The full text of every license is in the LICENSES/
+directory. This file summarizes the licenses of the files built into
+/www/cgi-bin/logger.cgi (see Makefile.arm) and /www/logger.html. If this
+summary and a file header disagree, the file header applies.
+
+
+License                           SPDX identifier / license text
+--------------------------------  -------------------------------------------
+1. UEI Proprietary                LicenseRef-UEI-Proprietary
+                                  LICENSES/LicenseRef-UEI-Proprietary.txt
+
+
+1. LicenseRef-UEI-Proprietary
+-------------------------------
+   Built into the binaries:
+   DataLogger.cpp        SensorConversion.cpp  UEIPACConfig.cpp
+   UI/DataLogger_UI.cpp  UeiCJCConverter.cpp
+
+   Installed files:
+   /www/cgi-bin/logger.cgi  /www/logger.html
+
+   [REVIEW NOTE - remove before commit] Almost none of the UEI files have a
+   copyright or license header today. Add the SPDX header shown below to
+   each file.
+
+
+External components (not included in this directory)
+----------------------------------------------------
+logger.html loads js/jquery.js, js/jquery-ui.min.js and js/dygraph-
+combined.js at runtime. These MIT-licensed files are shipped by ueiroot-
+wwwfs and are not covered by this file.
+
+
+Files not built/installed for the ARM (SoloX) target
+----------------------------------------------------
+Windows/Visual Studio project files, tests and other build variants in the
+SVN module are not part of the Yocto package and are not covered by this
+summary.
+
+
+[REVIEW NOTE - remove before commit] DataLogger.cpp contains the Eclipse
+template placeholder "Copyright : Your copyright notice". Replace it with
+the UEI header.
+
+
+Per-file header format
+----------------------
+   // SPDX-License-Identifier: LicenseRef-UEI-Proprietary
+   // Copyright (C) 2026 United Electronic Industries, Inc.
+
+
+Yocto recipe: ueidatalogger   LICENSE = "Proprietary"

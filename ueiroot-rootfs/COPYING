@@ -1,0 +1,61 @@
+PDNA_MX6SX/kirkstone/ueiroot-rootfs - root file system overlay (ueiroot-rootfs)
+===============================================================================
+
+Copyright (C) United Electronic Industries, Inc. (UEI)
+All rights reserved.
+
+Each file is licensed as stated in its own header (SPDX-License-Identifier
+line or license notice). The full text of every license is in the LICENSES/
+directory. This file summarizes the licenses of the files installed by the
+ueiroot-rootfs package. If this summary and a file header disagree, the
+file header applies.
+
+
+License                           SPDX identifier / license text
+--------------------------------  -------------------------------------------
+1. UEI Proprietary                LicenseRef-UEI-Proprietary
+                                  LICENSES/LicenseRef-UEI-Proprietary.txt
+2. GNU GPL v2 only                GPL-2.0-only
+                                  LICENSES/GPL-2.0-only.txt
+
+
+1. LicenseRef-UEI-Proprietary
+-------------------------------
+   Installed:
+   /etc/ueimodbus.xml
+   /etc/xdg/autostart/setlxqtbg.desktop
+   /usr/bin/ddimage.sh
+   /usr/bin/devtbl
+   /usr/bin/setip
+   /usr/bin/setipeth0
+   /usr/bin/setipeth1
+   /usr/bin/uei-mkgzimg.sh
+   /usr/bin/ueiinfo.sh
+   /usr/bin/wpaconfig
+   /usr/local/html/solox-welcome.html
+   /usr/share/applications/uei-pdnaexplorer.desktop
+
+   [REVIEW NOTE - remove before commit] Almost none of the UEI files have a
+   copyright or license header today. Add the SPDX header shown below to
+   each file.
+
+
+2. GPL-2.0-only
+   OpenEmbedded-Core busybox recipe (poky/meta/recipes-core/busybox/files/busybox-httpd)
+-----------------
+   Installed:
+   /etc/init.d/busybox-httpd  /etc/init.d/busybox-inetd
+
+   busybox-httpd is the oe-core busybox-httpd init script with HTTPROOT
+   changed to /www; busybox-inetd is derived from the same script. Both
+   inherit the busybox recipe license GPL-2.0-only.
+
+
+
+Per-file header format
+----------------------
+   # SPDX-License-Identifier: LicenseRef-UEI-Proprietary
+   # Copyright (C) 2026 United Electronic Industries, Inc.
+
+
+Yocto recipe: ueiroot-rootfs   LICENSE = "Proprietary & GPL-2.0-only"
